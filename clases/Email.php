@@ -20,7 +20,32 @@ class Email {
     public function enviarConfirmacion() {
 
          // create a new object
-         $mail = new PHPMailer();
+         $mail = new          }
+         p span {
+             font-size: 12px;
+         }
+         div p{
+             border-bottom: 1px solid #000000;
+             border-top: none;
+             margin-top: 40px;
+         }
+     </style>
+     <body>
+         <h1>AppCalculadora</h1>
+         <h2>¡Hola ".$this->nombre." !</h2>
+         <p>Has solicitado reestablecer tu password, sigue el siguiente enlace para hacerlo.</p>
+         <a href='http://localhost:3000/recuperar?token=" . $this->token . "'><button>Recuperar</button></a>
+         <p>Si tu no solicitaste este cambio, puedes ignorar el mensaje</p>
+         <div><p></p></div>
+         <p><span>Este correo electrónico fue enviado desde una dirección solamente de notificaciones que no puede aceptar correo electrónico entrante. Por favor no respondas a este mensaje.
+         Si necesitas comunicarte con administración puedes hacerlo enviando un correo a estebanoller73qgmail.com</span></p>
+     </body>
+     </html>";
+
+     $mail->send();
+    }
+}
+();
          $mail->isSMTP();
          $mail->Host = 'smtp.mailtrap.io';
          $mail->SMTPAuth = true;
